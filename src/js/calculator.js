@@ -32,9 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Basic input validation
             if (/^[0-9+\-*/().]+$/.test(currentExpression)) {
+                // used some regex here but unnessary since we used readonly
                 const result = eval(currentExpression);
                 display.value = result;
-                currentExpression = result.toString();
+                currentExpression = result
             } else {
                 throw new Error('Invalid input');
             }
