@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons.addEventListener('click', function(e) {
         if (e.target.classList.contains('btn')) {
             const value = e.target.getAttribute('data-value');
-            if (value !== '=') {
+            if (value) {
+              
                 appendToDisplay(value);
+                console.log("just got in")
             }
         }
     });
@@ -19,13 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
     equalsBtn.addEventListener('click', calculateResult);
 
     function appendToDisplay(value) {
+
         currentExpression += value;
         display.value = currentExpression;
     }
 
     function clearDisplay() {
         currentExpression = '';
-        display.value = '';
+        display.value = '0';
+        console.log(currentExpression, display.value);
+        
     }
 
     function calculateResult() {

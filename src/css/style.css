@@ -57,7 +57,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn:active {
+.btn:active  {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +115,7 @@ body {
         font-size: 30px;
     }
 
-    .btn {
+    .btn .btn2 {
         height: 60px;
         font-size: 20px;
     }
